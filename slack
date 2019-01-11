@@ -107,6 +107,6 @@ event_style = event_style()
 attachment = { "fallback": plaintext, "color": event_style['color'],  "text":  message, "mrkdwn_in": ["text"]}
 data = {"channel": channel, "username": bot_name, "attachments": [attachment], "icon_emoji": event_style['emoji']}
 
-conn = requests.post(slack_domain+slack_path,data = json.dumps(data), proxies=proxies)
-
+#conn = requests.post(slack_domain+slack_path,data = json.dumps(data), proxies=proxies)
+conn = requests.post(slack_domain+slack_path,data = json.dumps(data))
 print(conn.status_code)
